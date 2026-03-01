@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ceremonias - Maproart Holístika</title>
+
+  <!-- Tipografía e íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      
+      color: #222;
+    }
+
+    /* HEADER */
+    header.site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+        box-shadow: -4px 0 10px 0 #e5e5e5;
+      padding: 24px 56px;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .brand {
+      color: #000000;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #ab47bc;
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    /* MAIN */
+    main.section {
+      padding: 160px 20px 80px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #6a1b9a;
+      margin-bottom: 12px;
+    }
+
+    p {
+    
+      max-width: 800px;
+      margin: 0 auto 50px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 28px;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #6a1b9a;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #6a1b9a, #ab47bc);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+  
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: linear-gradient(135deg, #6a1b9a, #4a148c);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #ffeaa7;
+      text-decoration: none;
+    }
+
+    /* MENU RESPONSIVO */
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 15, 15, 0.96);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      gap: 26px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .nav-links.open a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links.open a:hover {
+      color: #ab47bc;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(1.05); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .burger { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html">
+        <img src="Logo.jpg" alt="Logo Maproart Holístika">
+        <span>Maproart Holístika</span>
+      </a>
+      <button id="btn-menu" class="burger" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="ceremonias.html" class="active">Ceremonias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1>Ceremonias holísticas</h1>
+    <p>Rituales diseñados para armonización, conexión espiritual y renovación energética. Cada ceremonia se adapta a tus necesidades, honrando los ciclos naturales y tu camino interior.</p>
+
+    <section class="service-list">
+      <article class="service card">
+        <h3><i class="fas fa-feather-pointed"></i> Cierre de ciclos y apertura de caminos</h3>
+        <p>Ritual con intención para soltar lo que ya no sirve y abrir nuevas posibilidades. Ideal para etapas de cambio y crecimiento.</p>
+      </article>
+
+      <article class="service card">
+        <h3><i class="fas fa-sparkles"></i> Armonización energética grupal o individual</h3>
+        <p>Sesiones para equilibrar y alinear energías en personas, hogares o grupos, integrando elementos naturales y simbología sagrada.</p>
+      </article>
+
+      <article class="service card">
+        <h3><i class="fas fa-hands-praying"></i> Conexión con arcángeles y geometría sagrada</h3>
+        <p>Prácticas de canalización espiritual, trabajo con símbolos, cristales y energías superiores para reequilibrar cuerpo y alma.</p>
+      </article>
+    </section>
+
+    <div class="text-center" style="margin-top:40px;">
+      <a href="contacto.html" class="btn-primary">Solicitar ceremonia</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Maproart Holístika – Ivana Alejandra Molina</p>
+    <p>Email: <a href="mailto:maproartholistika@gmail.com">maproartholistika@gmail.com</a> | WhatsApp: <a href="https://wa.me/542645813828">+54 264 581 3828</a></p>
+    <div class="socials" aria-hidden="false">
+        <a target="_blank" href="https://www.instagram.com/maproart.holistika" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.facebook.com/MaproartHolístika" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.tiktok.com/@maproart.holistika" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+  </footer>
+
+  <script>
+    // menú hamburguesa ↔ cruz
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('btn-menu');
+      const nav = document.getElementById('nav-links');
+      const icon = btn.querySelector('i');
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-times');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
