@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Maproart Holístika - Despierta tu luz interior con terapia holística, tarot y cursos online.">
+  <title>Maproart Holístika - por Ivana Alejandra Molina</title>
+  <link rel="icon" href="https://via.placeholder.com/32x32?text=MH">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+    
+      color: #222;
+    }
+
+    /* HEADER */
+   header.site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: -4px 0 10px 0 #e5e5e5;
+      padding: 24px 56px;
+      z-index: 100;
+    }
+
+    .section {
+      padding: 160px 20px 80px;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .brand {
+      color: #000000;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #ab47bc;
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      color: #808080;
+      font-size: 22px;
+    }
+
+    /* MAIN */
+    main.section {
+      padding: 160px 20px 80px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #6a1b9a;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin: 0 auto 50px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 28px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 {
+      color: #6a1b9a;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #6a1b9a, #ab47bc);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-weight: 600;
+      transition: 0.3s;
+      display: block;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: linear-gradient(135deg, #6a1b9a, #4a148c);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #ffeaa7;
+      text-decoration: none;
+    }
+
+    /* MENU RESPONSIVO */
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 15, 15, 0.96);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      gap: 26px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .nav-links.open a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links.open a:hover {
+      color: #ab47bc;
+      transform: scale(1.05);
+    }
+
+    .grid-sm{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(1.05); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .burger { display: block; }
+    }
+  </style>
+</head>
+<body>
+   <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="../index.html">
+        <img src="../Imagenes/Logo.jpg" alt="Logo Maproart Holístika">
+        <span>Maproart Holístika</span>
+      </a>
+      <button id="btn-menu" class="burger" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../servicios.html" class="active">Servicios</a></li>
+        <li><a href="../cursos.html">Cursos</a></li>
+        <li><a href="../ceremonias.html">Ceremonias</a></li>
+        <li><a href="../contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+  <section class="section services" id="servicios">
+    <div class="container">
+      
+      <h2 class="text-center">Lectura de Tarot</h2>
+      <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">
+        Un encuentro profundo diseñado para despertar tu luz interior y obtener claridad sobre tu camino personal.
+      </p>
+
+      <div class="grid">
+        
+        <div class="card">
+          <img src="https://birthdate.co/cdn/shop/articles/fortune-teller-hands-holding-sun-card.jpg?v=1666656823&width=786" alt="Sesión de Tarot Holístico" style="width: 100%; border-radius: 4px;">
+          
+          <div style="background: var(--bg-gradient); padding: 20px; margin-top: 15px; border: 1px solid var(--muted); border-radius: 4px;">
+            <div style="text-align: center; margin-bottom: 15px;">
+              <span style="font-size: 12px; font-weight: 600; color: #777; text-transform: uppercase;">Público General</span>
+              <h3 style="color: var(--violet-1); margin: 5px 0;">$43.000 <small style="font-size: 14px;">ARS</small></h3>
+            </div>
+            
+            <div style="text-align: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px;">
+              <span style="font-size: 12px; font-weight: 600; color: var(--violet-2); text-transform: uppercase;">Alumnas y Exalumnas</span>
+              <h3 style="color: var(--violet-1); margin: 5px 0;">$38.000 <small style="font-size: 14px;">ARS</small></h3>
+            </div>
+          </div>
+
+          <p class="blessing text-center" style="margin-top: 15px; color: var(--violet-2);"><em>🙌🏼 Luz y bendiciones</em></p>
+        </div>
+
+        <div class="content" style="text-align: left;">
+          <h3 style="color: var(--violet-1); margin-bottom: 20px;">¿Qué incluye la sesión?</h3>
+          
+          <ul class="tools-list">
+            <li><i class="fas fa-star"></i> <strong>Lectura general:</strong> Amor, dinero, trabajo y salud.</li>
+            <li><i class="fas fa-question-circle"></i> <strong>5 preguntas:</strong> Consultas específicas sobre tus dudas.</li>
+            <li><i class="fas fa-road"></i> <strong>Camino de vida:</strong> Análisis de karma y propósito.</li>
+            <li><i class="fas fa-calendar-alt"></i> <strong>Año personal:</strong> Tendencias para tu ciclo actual.</li>
+            <li><i class="fas fa-moon"></i> <strong>Mensaje Oracular:</strong> Guía de dos oráculos complementarios.</li>
+          </ul>
+
+          <div class="card" style="margin-top: 30px; border-left: 4px solid var(--violet-2);">
+            <p style="margin-bottom: 0; font-size: 15px;">
+              <strong>Duración:</strong> 60 a 70 minutos.<br>
+              <strong>Modalidad:</strong> Online (vía videollamada).
+            </p>
+          </div>
+
+          <div style="margin-top: 25px; text-align: center;">
+             <p style="font-size: 13px; color: #666;">Medios de pago: Mercado Pago / Transferencia</p>
+          </div>
+
+          <div class="text-center" style="margin-top: 20px;">
+            <a target="_blank" 
+   href="https://wa.me/542645813828?text=Hola%20Ivana!%20Quisiera%20reservar%20un%20turno%20para%20una%20Lectura%20de%20Tarot%20Hol%C3%ADstico.%20%C2%BFTen%C3%A9s%20disponibilidad%20pr%C3%B3ximamente?" 
+   class="btn-primary" 
+   style="width: 100%; max-width: 300px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px;">
+   <i class="fab fa-whatsapp"></i> RESERVAR MI TURNO
+</a>         </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+  
+  <footer class="site-footer">
+    <p>&copy; Maproart Holístika – Ivana Alejandra Molina</p>
+    <p>Email: <a href="mailto:maproartholistika@gmail.com">maproartholistika@gmail.com</a> | WhatsApp: <a href="https://wa.me/542645813828">+54 264 581 3828</a></p>
+    <div class="socials" aria-hidden="false">
+        <a target="_blank" href="https://www.instagram.com/maproart.holistika" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.facebook.com/MaproartHolístika" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.tiktok.com/@maproart.holistika" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+  </footer>
+  
+   <script>
+    // menú hamburguesa ↔ cruz
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('btn-menu');
+      const nav = document.getElementById('nav-links');
+      const icon = btn.querySelector('i');
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-times');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

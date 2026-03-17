@@ -38,6 +38,10 @@ body {
   justify-content: center;
 }
 
+.bg-soft {
+  background: rgba(15, 15, 15, 0.02);
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -181,7 +185,7 @@ body {
   justify-content: center;
   /*darken linear bg tarot*/
   background: linear-gradient(0deg, rgb(70, 23, 145), rgb(76, 5, 82));
-  background-image: url("hero.jpg");
+  background-image: url("Imagenes/hero.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -237,7 +241,7 @@ body {
 
 /* 📘 SECCIONES */
 .section {
-  padding: 90px 20px 0 20px;
+  padding: 90px 20px 48px 20px;
 }
 
 #testimonios {
@@ -252,14 +256,14 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns:400px 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
   align-items: center;
 }
 
 .grid-sm {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -273,7 +277,9 @@ h2 {
 /* 📦 TARJETAS */
 .card {
   background: var(--card-bg);
- 
+ display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   padding: 24px;
   text-align: left;
@@ -285,8 +291,16 @@ h2 {
 
 .card img {
   width: 100%;
- 
+  margin-top: auto;
   margin-bottom: 16px;
+}
+
+.card h3 {
+  margin-top: auto;
+}
+
+.card-tools {
+  margin-bottom: 48px;
 }
 
 /* 🧘🏻‍♀️ SOBRE MÍ */
@@ -372,6 +386,9 @@ h2 {
 @media (max-width: 600px) {
   .hero-text h1 {
     font-size: 28px;
+  }
+  .hero-cta .btn {
+    width: 100%;
   }
   .brand span {
     font-size: 14px;

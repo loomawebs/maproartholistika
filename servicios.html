@@ -76,7 +76,7 @@
       display: none;
       background: none;
       border: none;
-      color: #fff;
+      color: #000000;
       font-size: 22px;
     }
 
@@ -100,9 +100,9 @@
 
     .service-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -126,10 +126,11 @@
     }
 
     .btn-primary {
-      background: linear-gradient(90deg, #6a1b9a, #ab47bc);
+      background: #6a1b9a;
       color: #fff;
       text-decoration: none;
-      padding: 12px 24px;
+      padding: 10px 18px;
+      border-radius: 4px;
       font-weight: 600;
       transition: 0.3s;
     }
@@ -195,7 +196,7 @@
   <header class="site-header">
     <nav class="navbar">
       <a class="brand" href="index.html">
-        <img src="Logo.jpg" alt="Logo Maproart Holístika">
+        <img src="Imagenes/Logo.jpg" alt="Logo Maproart Holístika">
         <span>Maproart Holístika</span>
       </a>
       <button id="btn-menu" class="burger" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
@@ -217,37 +218,35 @@
       <article class="card">
         <h3><i class="fas fa-sun"></i> Lecturas de tarot</h3>
         <p>Lecturas general, del alma, cabalística, de relaciones, dinero, trabajo, predictiva y terapéutica.</p>
-      </article>
-
-      <article class="card">
-        <h3><i class="fas fa-dove"></i> Consultas espirituales</h3>
-        <p>Orientación del alma, desbloqueos energéticos, aperturas de caminos, cortes de lazos y acompañamiento en duelos.</p>
+        <a href="Servicios/lecturatarot.html" class="btn-primary"><i class="fas fa-info-circle"></i> Más información</a>
       </article>
 
       <article class="card">
         <h3><i class="fas fa-infinity"></i> Carta numerológica</h3>
-        <p>Conocé tu matriz del destino y descubrí los patrones energéticos que guían tu vida.</p>
+        <p>Descubre el mensaje del universo en tu número de destino y entiende tu camino espiritual.</p>
+        <a href="Servicios/cartanumerologica.html" class="btn-primary"><i class="fas fa-info-circle"></i> Más información</a>
       </article>
 
-      <article class="card">
-        <h3><i class="fas fa-pendulum"></i> Radiestesia</h3>
-        <p>Uso del péndulo para diagnósticos energéticos, armonización y desbloqueo vibracional.</p>
+      <article class="card"><!--Conocé tu matriz del destino y descubrí los patrones energéticos que guían tu vida.-->
+        <h3><i class="fas fa-chart-line"></i> Matriz del destino</h3>
+        <p>Conocé tu matriz del destino y descubrí los patrones energéticos que guían tu vida.</p>
+        <a href="Servicios/matrizdestino.html" class="btn-primary"><i class="fas fa-info-circle"></i> Más información</a>
+
       </article>
 
       <article class="card">
         <h3><i class="fas fa-gem"></i> Tratamientos con máquina radiónica</h3>
         <p>Protocolos personalizados combinando cromoterapia, cristales y geometría sagrada.</p>
+        <a href="Servicios/radionica.html" class="btn-primary"><i class="fas fa-info-circle"></i> Más información</a>
       </article>
 
       <article class="card">
         <h3><i class="fas fa-water"></i> Limpiezas energéticas</h3>
         <p>Limpiezas de personas, hogares y negocios para eliminar cargas densas y renovar la energía vital.</p>
+        <a href="Servicios/limpiezasenergeticas.html" class="btn-primary"><i class="fas fa-info-circle"></i> Más información</a>
       </article>
     </section>
 
-    <div class="text-center" style="margin-top:40px;">
-      <a href="contacto.html" class="btn-primary">Agendar consulta</a>
-    </div>
   </main>
 
   <footer class="site-footer">
