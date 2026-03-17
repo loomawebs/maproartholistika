@@ -207,12 +207,12 @@
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
-      .burger { display: block; }
+      .burger {  color: #7a7a7a; display: block; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header">
+ <header class="site-header">
     <nav class="navbar">
       <a class="brand" href="index.html">
         <img src="Imagenes/Logo.jpg" alt="Logo Maproart Holístika">
@@ -223,8 +223,8 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="cursos.html">Cursos</a></li>
-        <li><a href="ceremonias.html">Ceremonias</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
+        <li><a href="ceremonias.html" class="active">Ceremonias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -262,16 +262,6 @@
 <script>
   // Script para manejo de envío y menú
   document.addEventListener('DOMContentLoaded', () => {
-    // 1. Lógica del Menú
-    const btn = document.getElementById('btn-menu');
-    const nav = document.getElementById('nav-links');
-    const icon = btn.querySelector('i');
-
-    btn.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      icon.classList.toggle('fa-bars');
-      icon.classList.toggle('fa-times');
-    });
 
     // 2. Lógica del Formulario (AJAX para que no recargue la página)
     const form = document.getElementById('contact-form');
@@ -306,6 +296,7 @@
       }
     });
   });
+  
 </script>
     </div>
   </main>
@@ -320,7 +311,7 @@
       </div>
   </footer>
 
-  <script>
+ <script>
     // menú hamburguesa ↔ cruz
     document.addEventListener('DOMContentLoaded', () => {
       const btn = document.getElementById('btn-menu');
