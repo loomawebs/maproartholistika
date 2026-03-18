@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Maproart Holístika - Despierta tu luz interior con terapia holística, tarot y cursos online.">
+  <title>Limpiezas Energeticas - Maproart Holístika</title>
+  <link rel="icon" href="https://via.placeholder.com/32x32?text=MH">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+    
+      color: #222;
+    }
+
+    /* HEADER */
+   header.site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: -4px 0 10px 0 #e5e5e5;
+      padding: 24px 56px;
+      z-index: 100;
+    }
+
+    .section {
+      padding: 160px 20px 80px;
+      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .brand {
+      color: #000000;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #ab47bc;
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: none;
+      color: #808080;
+      font-size: 22px;
+    }
+
+    /* MAIN */
+    main.section {
+      padding: 160px 20px 80px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #6a1b9a;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin: 0 auto 50px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 28px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 {
+      color: #6a1b9a;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #6a1b9a, #ab47bc);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-weight: 600;
+      transition: 0.3s;
+      display: block;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      background: linear-gradient(135deg, #6a1b9a, #4a148c);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+   
+    }
+
+    footer a {
+      color: #ffeaa7;
+      text-decoration: none;
+    }
+
+    /* MENU RESPONSIVO */
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 15, 15, 0.96);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      gap: 26px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .nav-links.open a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-links.open a:hover {
+      color: #ab47bc;
+      transform: scale(1.05);
+    }
+
+    .grid-sm{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(1.05); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .burger { display: block; }
+    }
+  </style>
+</head>
+<body>
+   <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="../index.html">
+        <img src="../Imagenes/Logo.jpg" alt="Logo Maproart Holístika">
+        <span>Maproart Holístika</span>
+      </a>
+      <button id="btn-menu" class="burger" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../servicios.html" class="active">Servicios</a></li>
+        <li><a href="../cursos.html">Cursos</a></li>
+        <li><a href="../ceremonias.html">Ceremonias</a></li>
+        <li><a href="../contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+<main>
+  <section class="section limpiezas bg-dual-energy" id="limpiezas">
+    <div class="container">
+      
+      <h2 class="text-center">Limpieza Energética Profesional</h2>
+      <p class="text-center" style="max-width: 850px; margin: 0 auto 40px;">
+        Recuperá el equilibrio y abrí tus caminos. Intervención profunda mediante Radiestesia y Radiónica para restaurar el flujo natural de bienestar y prosperidad.
+      </p>
+
+      <div class="grid">
+        
+        <div class="card">
+          <img src="https://www.clarin.com/2023/10/25/JwzvDNock_2000x1500__1.jpg" alt="Limpieza Energética Profesional" style="width: 100%; border-radius: 4px;">
+          
+          <div style="background: var(--bg-gradient); padding: 20px; margin-top: 15px; border: 1px solid var(--muted); border-radius: 4px;">
+            <div style="text-align: center; margin-bottom: 12px;">
+              <span style="font-size: 11px; font-weight: 600; color: #777; text-transform: uppercase;">Inversión por Servicio</span>
+              <h3 style="color: var(--violet-1); margin: 5px 0;">$40.000 <small style="font-size: 14px;">ARS</small></h3>
+            </div>
+            
+            <ul style="list-style: none; padding: 0; margin: 10px 0 0 0; font-size: 13px; color: #555; text-align: center; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px;">
+              <li>📍 Limpieza de Personas</li>
+              <li>📍 Limpieza de Hogar</li>
+              <li>📍 Limpieza de Negocios</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--muted); padding: 15px; margin-top: 15px; border-radius: 4px; text-align: center;">
+            <p style="font-size: 14px; margin-bottom: 0;">
+              <strong>Diagnóstico manual preciso y emisión de frecuencias correctoras.</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="content" style="text-align: left;">
+          <h3 style="color: var(--violet-1); margin-bottom: 20px;">¿Qué podemos armonizar?</h3>
+          
+          <ul class="tools-list">
+            <li>
+             
+              <strong> <i class="fas fa-user-check"></i> En Personas:</strong> Liberación de bloqueos emocionales, sellado áurico y alineación de centros vitales.
+            </li>
+            <li>
+              
+              <strong><i class="fas fa-home"></i> En el Hogar:</strong> Saneamiento de espacios, neutralización de influencias y creación de un refugio de paz.
+            </li>
+            <li>
+              
+              <strong><i class="fas fa-briefcase"></i> En Negocios:</strong> Limpieza de "memoria" del lugar, reactivación de abundancia y atracción de clientes.
+            </li>
+          </ul>
+
+          <div class="card" style="margin-top: 30px; border-left: 4px solid var(--violet-2);">
+            <p style="margin-bottom: 0; font-size: 15px;">
+              <strong>¿Sentís pesadez o estancamiento?</strong><br>
+              Un servicio profesional y ágil enfocado en que la energía vuelva a trabajar a tu favor de manera inmediata.
+            </p>
+          </div>
+
+          <div style="margin-top: 25px; text-align: center;">
+             <span style="color: var(--violet-1); font-weight: bold; font-size: 14px;">
+                <i class="fas fa-magic"></i> RESULTADOS DIRECTOS Y EFECTIVOS
+             </span>
+          </div>
+
+          <div class="text-center" style="margin-top: 20px;">
+            <a target="_blank" 
+   href="https://wa.me/542645813828?text=Hola%20Ivana!%20Me%20contacto%20para%20solicitar%20un%20diagn%C3%B3stico%20de%20Limpieza%20Energ%C3%A9tica.%20Me%20gustar%C3%ADa%20consultarte%20por%20una%20limpieza%20de%3A" 
+   class="btn-primary" 
+   style="width: 100%; max-width: 350px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 10px;">
+   <i class="fab fa-whatsapp"></i> SOLICITAR MI DIAGNÓSTICO
+</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+  
+  <footer class="site-footer">
+    <p>&copy; Maproart Holístika – Ivana Alejandra Molina</p>
+    <p>Email: <a href="mailto:maproartholistika@gmail.com">maproartholistika@gmail.com</a> | WhatsApp: <a href="https://wa.me/542645813828">+54 264 581 3828</a></p>
+    <div class="socials" aria-hidden="false">
+        <a target="_blank" href="https://www.instagram.com/maproart.holistika" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.facebook.com/MaproartHolístika" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://www.tiktok.com/@maproart.holistika" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+  </footer>
+  
+   <script>
+    // menú hamburguesa ↔ cruz
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('btn-menu');
+      const nav = document.getElementById('nav-links');
+      const icon = btn.querySelector('i');
+
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-times');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -301,10 +301,6 @@ h2 {
   margin-bottom: 16px;
 }
 
-.card h3 {
-  margin-top: auto;
-}
-
 .card-tools {
   margin-bottom: 48px;
 }
@@ -328,6 +324,11 @@ h2 {
   gap: 10px;
   color: #555;
   margin-bottom: 8px;
+}
+
+.tools-list li i {
+  margin-bottom: auto;
+  margin-top: 6px;
 }
 
 /* 💬 TESTIMONIOS */
